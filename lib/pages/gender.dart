@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/age.dart';
 import 'package:flutter_application_1/pages/core/login.dart';
@@ -138,7 +140,7 @@ class _GenderSelectionState extends State<GenderSelection> {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) =>  Age()),
+                              MaterialPageRoute(builder: (context) =>  const Age()),
                             );
                           },
                           child: const Text(

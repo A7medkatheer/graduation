@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../core/home.dart';
@@ -12,7 +11,7 @@ class VitaminNation extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
-          title: Center(
+          title: const Center(
             child: Text(
               'VITAMIN NATION',
               style: TextStyle(
@@ -22,7 +21,7 @@ class VitaminNation extends StatelessWidget {
             ),
           ),
           elevation: 0,
-          backgroundColor: Color(0xffD0FD3E),
+          backgroundColor: const Color(0xffD0FD3E),
           actions: <Widget>[
             IconButton(
               icon: const Icon(
@@ -32,7 +31,7 @@ class VitaminNation extends StatelessWidget {
               ),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: ((context) => HomeScreen())));
+                    MaterialPageRoute(builder: ((context) => const HomeScreen())));
               },
             ),
           ],
@@ -41,10 +40,10 @@ class VitaminNation extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => SupplementScreen()),
+                MaterialPageRoute(builder: (context) => const SupplementScreen()),
               );
             },
-            child: Icon(
+            child: const Icon(
               Icons.arrow_circle_left_outlined,
               color: Colors.black,
               size: 50,
@@ -54,7 +53,7 @@ class VitaminNation extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: ListView(
-            children: [
+            children: const [
               // Content about Vitamin Nation
               Text(
                 'The description',

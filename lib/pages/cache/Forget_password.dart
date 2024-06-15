@@ -100,10 +100,10 @@ class _PinputExampleState extends State<ForgetPassword> {
             ElevatedButton(
               onPressed: () {},
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(const Color(0xffD0FD3E)),
-                padding: MaterialStateProperty.all(
+                backgroundColor: WidgetStateProperty.all(const Color(0xffD0FD3E)),
+                padding: WidgetStateProperty.all(
                     const EdgeInsets.symmetric(horizontal: 90, vertical: 10)),
-                shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                shape: WidgetStateProperty.all(RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(27))),
               ),
               child: const Text(

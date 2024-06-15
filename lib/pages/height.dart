@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 
 import 'in_body.dart';
@@ -5,6 +7,8 @@ import 'weight.dart';
 
 
 class HeightPicker extends StatefulWidget {
+  const HeightPicker({super.key});
+
   @override
   _HeightPickerState createState() => _HeightPickerState();
 }
@@ -23,15 +27,15 @@ class _HeightPickerState extends State<HeightPicker> {
             width: double.infinity,
             height: double.infinity,
           ),
-          Padding(
-            padding: const EdgeInsets.all(70.0),
+          const Padding(
+            padding: EdgeInsets.all(70.0),
             child: Text(
               'WHAT\'S YOUR HEIGHT?',
               style: TextStyle(fontSize: 25, color: Colors.white),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 110.0),
+          const Padding(
+            padding: EdgeInsets.only(top: 110.0),
             child: Text(
               '        THIS HELPS US CREATE YOUR PERSONALIZED PLAN',
               style: TextStyle(color: Colors.white),
@@ -43,7 +47,7 @@ class _HeightPickerState extends State<HeightPicker> {
               child: ListWheelScrollView(
                 itemExtent: 80, // Increase height for each item
                 diameterRatio: 1.5,
-                physics: FixedExtentScrollPhysics(),
+                physics: const FixedExtentScrollPhysics(),
                 children: List.generate(
                   100, // Number of heights to display
                   (index) {
@@ -53,12 +57,12 @@ class _HeightPickerState extends State<HeightPicker> {
                       children: [
                         Text(
                           '$height cm',
-                          style: TextStyle(fontSize: 32, color: Colors.white),
+                          style: const TextStyle(fontSize: 32, color: Colors.white),
                         ),
                         Center(
                           child: Container(
                             width: 100,
-                            child: Divider(
+                            child: const Divider(
                               color: Color(0xffD0FD3E),
                               height: 5,
                               thickness: 2,
@@ -92,22 +96,22 @@ class _HeightPickerState extends State<HeightPicker> {
                       MaterialPageRoute(builder: (context) => Weight()),
                     );
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.arrow_circle_left_outlined,
                     color: Color(0xffD0FD3E),
                     size: 60,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 180,
                 ),
                 ElevatedButton(
                   onPressed: () {},
                   style: ButtonStyle(
                     backgroundColor:
-                        MaterialStateProperty.all(Color(0xffD0FD3E)),
+                        MaterialStateProperty.all(const Color(0xffD0FD3E)),
                     padding: MaterialStateProperty.all(
-                        EdgeInsets.symmetric(horizontal: 25, vertical: 10)),
+                        const EdgeInsets.symmetric(horizontal: 25, vertical: 10)),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(27))),
                   ),
@@ -115,10 +119,10 @@ class _HeightPickerState extends State<HeightPicker> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => InBody()),
+                        MaterialPageRoute(builder: (context) => const InBody()),
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       " Next > ",
                       style: TextStyle(fontSize: 24, color: Colors.black),
                     ),

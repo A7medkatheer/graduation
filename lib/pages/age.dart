@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 
 import 'gender.dart';
@@ -5,7 +7,10 @@ import 'weight.dart';
 
 
 class Age extends StatefulWidget {
+  const Age({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _AgePickerState createState() => _AgePickerState();
 }
 
@@ -23,27 +28,27 @@ class _AgePickerState extends State<Age> {
             width: double.infinity,
             height: double.infinity,
           ),
-          Padding(
-            padding: const EdgeInsets.all(70.0),
+          const Padding(
+            padding: EdgeInsets.all(70.0),
             child: Text(
               'HOW OLD ARE YOU ?',
               style: TextStyle(fontSize: 28, color: Colors.white),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 110.0),
+          const Padding(
+            padding: EdgeInsets.only(top: 110.0),
             child: Text(
               '        THIS HELPS US CREATE YOUR PERSONALIZED PLAN',
               style: TextStyle(color: Colors.white),
             ),
           ),
           Center(
-            child: Container(
+            child: SizedBox(
               height: 300,
               child: ListWheelScrollView(
                 itemExtent: 60,
                 diameterRatio: 1.5,
-                physics: FixedExtentScrollPhysics(),
+                physics: const FixedExtentScrollPhysics(),
                 children: List.generate(
                   100, // Number of ages to display
                   (index) {
@@ -53,10 +58,10 @@ class _AgePickerState extends State<Age> {
                       children: [
                         Text(
                           age.toString(),
-                          style: TextStyle(fontSize: 35, color: Colors.white),
+                          style: const TextStyle(fontSize: 35, color: Colors.white),
                         ),
-                        Center(
-                          child: Container(
+                        const Center(
+                          child: SizedBox(
                             width: 150,
                             child: Divider(
                               color: Color(0xffD0FD3E),
@@ -90,16 +95,16 @@ class _AgePickerState extends State<Age> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => GenderSelection()),
+                          builder: (context) => const GenderSelection()),
                     );
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.arrow_circle_left_outlined,
                     color: Color(0xffD0FD3E),
                     size: 60,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 180,
                 ),
                 ElevatedButton(
@@ -108,9 +113,9 @@ class _AgePickerState extends State<Age> {
                   },
                   style: ButtonStyle(
                     backgroundColor:
-                        MaterialStateProperty.all(Color(0xffD0FD3E)),
+                        MaterialStateProperty.all(const Color(0xffD0FD3E)),
                     padding: MaterialStateProperty.all(
-                        EdgeInsets.symmetric(horizontal: 25, vertical: 10)),
+                        const EdgeInsets.symmetric(horizontal: 25, vertical: 10)),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(27))),
                   ),
@@ -121,7 +126,7 @@ class _AgePickerState extends State<Age> {
                         MaterialPageRoute(builder: (context) => Weight()),
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       " Next > ",
                       style: TextStyle(fontSize: 24, color: Colors.black),
                     ),

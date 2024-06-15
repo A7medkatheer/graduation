@@ -17,10 +17,10 @@ class TrainingPrograms extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => HomeScreen()),
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
               );
             },
-            child: Icon(
+            child: const Icon(
               Icons.arrow_circle_left_outlined,
               color: Color(0xffD0FD3E),
               size: 50,
@@ -35,17 +35,17 @@ class TrainingPrograms extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                 'Training programs',
                 style: TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                 'Exercises(Drying system)',
                 style: TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
               ),
@@ -55,10 +55,10 @@ class TrainingPrograms extends StatelessWidget {
                 width: 382,
                 height: 237,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                 'Exercises(Bulking system)',
                 style: TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
               ),
@@ -68,10 +68,10 @@ class TrainingPrograms extends StatelessWidget {
                 width: 382,
                 height: 237,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                 'Exercises(Push - Pull -Legs system)',
                 style: TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
               ),

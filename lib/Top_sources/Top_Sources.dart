@@ -1,12 +1,12 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 import '../constant/constant.dart';
-import '../exercises/beginner/increase_weight/Day1_Chest.dart';
-
 class TopSources extends StatelessWidget {
    final int initialIndex;
 
-  TopSources({this.initialIndex = 0});
+  const TopSources({super.key, this.initialIndex = 0});
 
   
   @override

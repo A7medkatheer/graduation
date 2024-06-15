@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../constant/constant.dart';
-import '../exercises/beginner/increase_weight/Day1_Chest.dart';
 
 class DryingLevels extends StatelessWidget {
   final int initialIndex;
 
-  DryingLevels({this.initialIndex = 0});
+  const DryingLevels({super.key, this.initialIndex = 0});
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +16,10 @@ class DryingLevels extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Colors.black,
           appBar: PreferredSize(
-            preferredSize: Size.fromHeight(50.0),
+            preferredSize: const Size.fromHeight(50.0),
             child: AppBar(
               backgroundColor: Colors.black,
-              bottom: CustomTabBar(),
+              bottom: const CustomTabBar(),
             ),
           ),
           body: TabBarView(
@@ -30,7 +29,7 @@ class DryingLevels extends StatelessWidget {
               SingleChildScrollView(
                 child: Column(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     //! lable 1
@@ -39,17 +38,17 @@ class DryingLevels extends StatelessWidget {
                       width: 300,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Color(0xffD0FD3E)),
-                      child: Center(
+                          color: const Color(0xffD0FD3E)),
+                      child: const Center(
                           child: Text(
                         "First meal : Breakfast",
                         style: TextStyle(fontSize: 18),
                       )),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
-                    Row(
+                    const Row(
                       children: [
                         Text(
                           '                        Quantity   Calories   Protein   Carb   Fat',
@@ -57,12 +56,12 @@ class DryingLevels extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -72,12 +71,12 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -87,12 +86,12 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -102,20 +101,20 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Text(
+                    const Text(
                       'Preparation method:Mix oats with walnuts and \n     protein, then add water and stir the mixture',
                       style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
 //! label 2
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
 
@@ -124,17 +123,17 @@ class DryingLevels extends StatelessWidget {
                       width: 300,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Color(0xffD0FD3E)),
-                      child: Center(
+                          color: const Color(0xffD0FD3E)),
+                      child: const Center(
                           child: Text(
                         "Second meal : Snack",
                         style: TextStyle(fontSize: 18),
                       )),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
-                    Row(
+                    const Row(
                       children: [
                         Text(
                           '                        Quantity   Calories   Protein   Carb   Fat',
@@ -142,12 +141,12 @@ class DryingLevels extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -157,12 +156,12 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -173,12 +172,12 @@ class DryingLevels extends StatelessWidget {
                       ),
                     ),
 
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -188,12 +187,12 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
                     //!  lable 3
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     Container(
@@ -201,17 +200,17 @@ class DryingLevels extends StatelessWidget {
                       width: 300,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Color(0xffD0FD3E)),
-                      child: Center(
+                          color: const Color(0xffD0FD3E)),
+                      child: const Center(
                           child: Text(
                         "Thired meal : Breakfast",
                         style: TextStyle(fontSize: 18),
                       )),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
-                    Row(
+                    const Row(
                       children: [
                         Text(
                           '                        Quantity   Calories   Protein   Carb   Fat',
@@ -219,12 +218,12 @@ class DryingLevels extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -234,12 +233,12 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -249,12 +248,12 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -264,20 +263,20 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
-                    Text(
+                    const Text(
                       'Medium salad example: tomatoes with cucumbers \n                           with a little olive oil ',
                       style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
 
                     //!  lable 4
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     Container(
@@ -285,17 +284,17 @@ class DryingLevels extends StatelessWidget {
                       width: 300,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Color(0xffD0FD3E)),
-                      child: Center(
+                          color: const Color(0xffD0FD3E)),
+                      child: const Center(
                           child: Text(
                         "Fourth meal : Pre work out Snack",
                         style: TextStyle(fontSize: 18),
                       )),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
-                    Row(
+                    const Row(
                       children: [
                         Text(
                           '                        Quantity   Calories   Protein   Carb   Fat',
@@ -303,12 +302,12 @@ class DryingLevels extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -319,16 +318,16 @@ class DryingLevels extends StatelessWidget {
                       ),
                     ),
 
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
 
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     //!  lable 5
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     Container(
@@ -336,17 +335,17 @@ class DryingLevels extends StatelessWidget {
                       width: 300,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Color(0xffD0FD3E)),
-                      child: Center(
+                          color: const Color(0xffD0FD3E)),
+                      child: const Center(
                           child: Text(
                         "Fifth meal : Post Workout",
                         style: TextStyle(fontSize: 18),
                       )),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
-                    Row(
+                    const Row(
                       children: [
                         Text(
                           '                        Quantity   Calories   Protein   Carb   Fat',
@@ -354,12 +353,12 @@ class DryingLevels extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -369,12 +368,12 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -384,12 +383,12 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -399,22 +398,22 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
-                    Text(
+                    const Text(
                       'Medium salad example: tomatoes with cucumbers \n                           with a little olive oil ',
                       style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
 
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
-                    Row(
+                    const Row(
                       children: [
                         Text(
                           '                         Quantity        Protein       Carb          Fat',
@@ -422,15 +421,15 @@ class DryingLevels extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -440,16 +439,16 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
 
-                    Rate_Us(),
-                    bottom_tab_bar(),
+                    const Rate_Us(),
+                    const bottom_tab_bar(),
                   ],
                 ),
               ),
@@ -459,7 +458,7 @@ class DryingLevels extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       //! lable 1
@@ -468,17 +467,17 @@ class DryingLevels extends StatelessWidget {
                         width: 300,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            color: Color(0xffD0FD3E)),
-                        child: Center(
+                            color: const Color(0xffD0FD3E)),
+                        child: const Center(
                             child: Text(
                           "First meal : Breakfast",
                           style: TextStyle(fontSize: 18),
                         )),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
-                      Row(
+                      const Row(
                         children: [
                           Text(
                             '                        Quantity   Calories   Protein   Carb   Fat',
@@ -486,12 +485,12 @@ class DryingLevels extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Row(
                           children: [
                             Text(
@@ -503,12 +502,12 @@ class DryingLevels extends StatelessWidget {
                         ),
                       ),
 
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Row(
                           children: [
                             Text(
@@ -519,12 +518,12 @@ class DryingLevels extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Row(
                           children: [
                             Text(
@@ -536,12 +535,12 @@ class DryingLevels extends StatelessWidget {
                         ),
                       ),
 
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Row(
                           children: [
                             Text(
@@ -552,7 +551,7 @@ class DryingLevels extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
@@ -563,17 +562,17 @@ class DryingLevels extends StatelessWidget {
                         width: 300,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            color: Color(0xffD0FD3E)),
-                        child: Center(
+                            color: const Color(0xffD0FD3E)),
+                        child: const Center(
                             child: Text(
                           "Second meal : Snack",
                           style: TextStyle(fontSize: 18),
                         )),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
-                      Row(
+                      const Row(
                         children: [
                           Text(
                             '                        Quantity   Calories   Protein   Carb   Fat',
@@ -581,13 +580,13 @@ class DryingLevels extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
 
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Row(
                           children: [
                             Text(
@@ -598,12 +597,12 @@ class DryingLevels extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Row(
                           children: [
                             Text(
@@ -614,12 +613,12 @@ class DryingLevels extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Row(
                           children: [
                             Text(
@@ -630,12 +629,12 @@ class DryingLevels extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
                       //!  lable 3
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       Container(
@@ -643,17 +642,17 @@ class DryingLevels extends StatelessWidget {
                         width: 300,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            color: Color(0xffD0FD3E)),
-                        child: Center(
+                            color: const Color(0xffD0FD3E)),
+                        child: const Center(
                             child: Text(
                           "Thired meal : Breakfast",
                           style: TextStyle(fontSize: 18),
                         )),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
-                      Row(
+                      const Row(
                         children: [
                           Text(
                             '                        Quantity   Calories   Protein   Carb   Fat',
@@ -661,12 +660,12 @@ class DryingLevels extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Row(
                           children: [
                             Text(
@@ -678,12 +677,12 @@ class DryingLevels extends StatelessWidget {
                         ),
                       ),
 
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Row(
                           children: [
                             Text(
@@ -694,20 +693,20 @@ class DryingLevels extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      Text(
+                      const Text(
                         'Medium-sizes salad with tomatoes, cucumbers and a little  \n                                            olive oil ',
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
 
                       //!  lable 4
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       Container(
@@ -715,17 +714,17 @@ class DryingLevels extends StatelessWidget {
                         width: 300,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            color: Color(0xffD0FD3E)),
-                        child: Center(
+                            color: const Color(0xffD0FD3E)),
+                        child: const Center(
                             child: Text(
                           "Fourth meal : Pre work out Snack",
                           style: TextStyle(fontSize: 18),
                         )),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
-                      Row(
+                      const Row(
                         children: [
                           Text(
                             '                        Quantity   Calories   Protein   Carb   Fat',
@@ -734,12 +733,12 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
 
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Row(
                           children: [
                             Text(
@@ -751,12 +750,12 @@ class DryingLevels extends StatelessWidget {
                         ),
                       ),
 
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Row(
                           children: [
                             Text(
@@ -767,13 +766,13 @@ class DryingLevels extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
 
                       //!  lable 5
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       Container(
@@ -781,17 +780,17 @@ class DryingLevels extends StatelessWidget {
                         width: 300,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            color: Color(0xffD0FD3E)),
-                        child: Center(
+                            color: const Color(0xffD0FD3E)),
+                        child: const Center(
                             child: Text(
                           "Fifth meal : Post Workout",
                           style: TextStyle(fontSize: 18),
                         )),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
-                      Row(
+                      const Row(
                         children: [
                           Text(
                             '                        Quantity   Calories   Protein   Carb   Fat',
@@ -799,12 +798,12 @@ class DryingLevels extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Row(
                           children: [
                             Text(
@@ -815,12 +814,12 @@ class DryingLevels extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Row(
                           children: [
                             Text(
@@ -831,12 +830,12 @@ class DryingLevels extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Row(
                           children: [
                             Text(
@@ -847,26 +846,26 @@ class DryingLevels extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
 
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      Text(
+                      const Text(
                         'Medium salad example: tomatoes with cucumbers with a \n                                        little olive oil ',
                         style: TextStyle(color: Colors.white, fontSize: 16),
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 25,
                       ),
-                      Row(
+                      const Row(
                         children: [
                           Text(
                             '                         Quantity        Protein       Carb          Fat',
@@ -874,15 +873,15 @@ class DryingLevels extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Row(
                           children: [
                             Text(
@@ -893,15 +892,15 @@ class DryingLevels extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
-                      Rate_Us(),
-                      bottom_tab_bar(),
+                      const Rate_Us(),
+                      const bottom_tab_bar(),
                     ],
                   ),
                 ),
@@ -911,7 +910,7 @@ class DryingLevels extends StatelessWidget {
               SingleChildScrollView(
                 child: Column(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     //! lable 1
@@ -920,17 +919,17 @@ class DryingLevels extends StatelessWidget {
                       width: 300,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Color(0xffD0FD3E)),
-                      child: Center(
+                          color: const Color(0xffD0FD3E)),
+                      child: const Center(
                           child: Text(
                         "First meal : Breakfast",
                         style: TextStyle(fontSize: 18),
                       )),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
-                    Row(
+                    const Row(
                       children: [
                         Text(
                           '                        Quantity   Calories   Protein   Carb   Fat',
@@ -938,12 +937,12 @@ class DryingLevels extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -954,12 +953,12 @@ class DryingLevels extends StatelessWidget {
                       ),
                     ),
 
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -969,12 +968,12 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -984,12 +983,12 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -999,20 +998,20 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Text(
+                    const Text(
                       'Preparation method:Mix oats with walnuts and \n     protein, then add water and stir the mixture',
                       style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
 //! label 2
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
 
@@ -1021,17 +1020,17 @@ class DryingLevels extends StatelessWidget {
                       width: 300,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Color(0xffD0FD3E)),
-                      child: Center(
+                          color: const Color(0xffD0FD3E)),
+                      child: const Center(
                           child: Text(
                         "Second meal : Snack",
                         style: TextStyle(fontSize: 18),
                       )),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
-                    Row(
+                    const Row(
                       children: [
                         Text(
                           '                        Quantity   Calories   Protein   Carb   Fat',
@@ -1039,12 +1038,12 @@ class DryingLevels extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -1054,12 +1053,12 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -1070,12 +1069,12 @@ class DryingLevels extends StatelessWidget {
                       ),
                     ),
 
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -1085,12 +1084,12 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
                     //!  lable 3
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     Container(
@@ -1098,17 +1097,17 @@ class DryingLevels extends StatelessWidget {
                       width: 300,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Color(0xffD0FD3E)),
-                      child: Center(
+                          color: const Color(0xffD0FD3E)),
+                      child: const Center(
                           child: Text(
                         "Thired meal : Breakfast",
                         style: TextStyle(fontSize: 18),
                       )),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
-                    Row(
+                    const Row(
                       children: [
                         Text(
                           '                        Quantity   Calories   Protein   Carb   Fat',
@@ -1116,12 +1115,12 @@ class DryingLevels extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -1131,12 +1130,12 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -1146,21 +1145,21 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
 
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    Text(
+                    const Text(
                       'Medium salad example: tomatoes with cucumbers \n                           with a little olive oil ',
                       style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
 
                     //!  lable 4
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     Container(
@@ -1168,17 +1167,17 @@ class DryingLevels extends StatelessWidget {
                       width: 300,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Color(0xffD0FD3E)),
-                      child: Center(
+                          color: const Color(0xffD0FD3E)),
+                      child: const Center(
                           child: Text(
                         "Fourth meal : Pre work out Snack",
                         style: TextStyle(fontSize: 18),
                       )),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
-                    Row(
+                    const Row(
                       children: [
                         Text(
                           '                        Quantity   Calories   Protein   Carb   Fat',
@@ -1186,12 +1185,12 @@ class DryingLevels extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -1202,16 +1201,16 @@ class DryingLevels extends StatelessWidget {
                       ),
                     ),
 
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
 
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     //!  lable 5
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     Container(
@@ -1219,17 +1218,17 @@ class DryingLevels extends StatelessWidget {
                       width: 300,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Color(0xffD0FD3E)),
-                      child: Center(
+                          color: const Color(0xffD0FD3E)),
+                      child: const Center(
                           child: Text(
                         "Fifth meal : Post Workout",
                         style: TextStyle(fontSize: 18),
                       )),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
-                    Row(
+                    const Row(
                       children: [
                         Text(
                           '                        Quantity   Calories   Protein   Carb   Fat',
@@ -1237,12 +1236,12 @@ class DryingLevels extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -1252,12 +1251,12 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -1267,27 +1266,27 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
 
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    Text(
+                    const Text(
                       'Medium salad example: tomatoes with cucumbers \n                           with a little olive oil ',
                       style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
 
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
-                    Row(
+                    const Row(
                       children: [
                         Text(
                           '                         Quantity        Protein       Carb          Fat',
@@ -1295,15 +1294,15 @@ class DryingLevels extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Text(
@@ -1313,16 +1312,16 @@ class DryingLevels extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Colors.white,
                     ),
 
-                    Rate_Us(),
-                    bottom_tab_bar(),
+                    const Rate_Us(),
+                    const bottom_tab_bar(),
                   ],
                 ),
               ),
@@ -1335,15 +1334,17 @@ class DryingLevels extends StatelessWidget {
 }
 
 class CustomTabBar extends StatelessWidget implements PreferredSizeWidget {
+  const CustomTabBar({super.key});
+
   @override
-  Size get preferredSize => Size.fromHeight(30.0);
+  Size get preferredSize => const Size.fromHeight(30.0);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: preferredSize.height,
       decoration: BoxDecoration(
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           colors: [Colors.black, Colors.black],
           begin: Alignment.centerLeft,
           end: Alignment.centerRight,
@@ -1353,7 +1354,7 @@ class CustomTabBar extends StatelessWidget implements PreferredSizeWidget {
       child: TabBar(
         indicator: BoxDecoration(
           borderRadius: BorderRadius.circular(15.0),
-          color: Color(0xffD0FD3E),
+          color: const Color(0xffD0FD3E),
         ),
         tabs: [
           _buildTab('Drying 1'),

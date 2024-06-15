@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../Drying/drying_levels.dart';
 import '../Top_sources/Top_Sources.dart';
 import '../constant/constant.dart';
-import '../exercises/beginner/increase_weight/Day1_Chest.dart';
 import '../healthy_recipes/bulking_levels.dart';
 import '../loss_weight/loss_wight_level_one.dart';
 import '../payment/plan.dart';
@@ -14,7 +13,7 @@ import 'nutrition_guide_see_all.dart';
 import 'training_programs_see_all.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +28,10 @@ class HomeScreen extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Plan()),
+                    MaterialPageRoute(builder: (context) => const Plan()),
                   );
                 },
-                child: Text(
+                child: const Text(
                   'Private-Home',
                   style: TextStyle(color: Color(0xffD0FD3E), fontSize: 22),
                 ),
@@ -45,7 +44,7 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
-              Row(
+              const Row(
                 children: [
                   Text(
                     'Common Questions',
@@ -56,7 +55,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               GestureDetector(
@@ -64,21 +63,21 @@ class HomeScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => TheMostImportantTips()),
+                        builder: (context) => const TheMostImportantTips()),
                   );
                 },
                 child: Image.asset('assets/assets/images/questions.png'),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
                 children: [
-                  Text(
+                  const Text(
                     'Nutritional supplements',
                     style: TextStyle(color: Color(0xffD0FD3E), fontSize: 14),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 170,
                   ),
                   GestureDetector(
@@ -86,17 +85,17 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => SupplementScreen()),
+                            builder: (context) => const SupplementScreen()),
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       'See All',
                       style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
                     ),
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               GestureDetector(
@@ -104,14 +103,14 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => SupplementScreen()),
+                          builder: (context) => const SupplementScreen()),
                     );
                   },
                   child: Image.asset('assets/assets/images/supplements2.png')),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Row(
+              const Row(
                 children: [
                   Text(
                     'Exercise guide',
@@ -126,10 +125,10 @@ class HomeScreen extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CircleAvatar(
@@ -150,16 +149,16 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
                 children: [
-                  Text(
+                  const Text(
                     'Training programs',
                     style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 170,
                   ),
                   GestureDetector(
@@ -167,17 +166,17 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => TrainingPrograms()),
+                            builder: (context) => const TrainingPrograms()),
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       'See All',
                       style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
                     ),
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               GestureDetector(
@@ -185,7 +184,7 @@ class HomeScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => DryingLevels(
+                        builder: (context) => const DryingLevels(
                               initialIndex: 1,
                             )),
                   );
@@ -196,16 +195,16 @@ class HomeScreen extends StatelessWidget {
                   width: 600,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Row(
                 children: [
-                  Text(
+                  const Text(
                     'Nutrition Programs',
                     style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 170,
                   ),
                   GestureDetector(
@@ -213,10 +212,10 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => NutritionProgramSeeAll()),
+                            builder: (context) => const NutritionProgramSeeAll()),
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       'See All',
                       style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
                     ),
@@ -227,11 +226,11 @@ class HomeScreen extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => DryingLevels()),
+                      MaterialPageRoute(builder: (context) => const DryingLevels()),
                     );
                   },
                   child: Image.asset('assets/assets/images/Dietart.jpg')),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               GestureDetector(
@@ -239,31 +238,31 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => HealthyRecipesBulkingUp1()),
+                          builder: (context) => const HealthyRecipesBulkingUp1()),
                     );
                   },
                   child: Image.asset('assets/assets/images/Nutritional.jpg')),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               GestureDetector(
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LossWightUp1()),
+                      MaterialPageRoute(builder: (context) => const LossWightUp1()),
                     );
                   },
                   child: Image.asset('assets/assets/images/weight loss.jpg')),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Row(
                 children: [
-                  Text(
+                  const Text(
                     'Nutrition Guide',
                     style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 190,
                   ),
                   GestureDetector(
@@ -271,17 +270,17 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => Nutritionguide()),
+                            builder: (context) => const Nutritionguide()),
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       'See All',
                       style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
                     ),
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -291,7 +290,7 @@ class HomeScreen extends StatelessWidget {
                     height: 189,
                     width: 182,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   GestureDetector(
@@ -299,7 +298,7 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => TopSources(
+                            builder: (context) => const TopSources(
                                   initialIndex: 1,
                                 )),
                       );
@@ -312,7 +311,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -322,7 +321,7 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => TopSources(
+                            builder: (context) => const TopSources(
                                   initialIndex: 3,
                                 )),
                       );
@@ -333,7 +332,7 @@ class HomeScreen extends StatelessWidget {
                       width: 182,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   GestureDetector(
@@ -341,7 +340,7 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => TopSources(
+                            builder: (context) => const TopSources(
                                   initialIndex: 4,
                                 )),
                       );
@@ -354,10 +353,10 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              Row(
+              const Row(
                 children: [
                   Text(
                     'Nutrition supplements',
@@ -377,7 +376,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => SupplementScreen()),
+                          builder: (context) => const SupplementScreen()),
                     );
                   },
                   child: Image.asset('assets/assets/images/supplements.jpg')),
@@ -386,7 +385,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => SupplementScreen()),
+                          builder: (context) => const SupplementScreen()),
                     );
                   },
                   child: Image.asset('assets/assets/images/supplements.jpg')),
@@ -394,7 +393,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: bottom_tab_bar(),
+      bottomNavigationBar: const bottom_tab_bar(),
     );
   }
 }

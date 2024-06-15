@@ -81,12 +81,12 @@ class _Page1State extends State<OnBoardingScreen1> {
                                       onPressed: () {},
                                       style: ButtonStyle(
                                         backgroundColor:
-                                            MaterialStateProperty.all(
+                                            WidgetStateProperty.all(
                                                 const Color(0xffD0FD3E)),
-                                        padding: MaterialStateProperty.all(
+                                        padding: WidgetStateProperty.all(
                                             const EdgeInsets.symmetric(
                                                 horizontal: 60, vertical: 10)),
-                                        shape: MaterialStateProperty.all(
+                                        shape: WidgetStateProperty.all(
                                             RoundedRectangleBorder(
                                                 borderRadius:
                                                     BorderRadius.circular(27))),

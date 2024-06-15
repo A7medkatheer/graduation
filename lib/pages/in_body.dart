@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/core/home.dart';
+
+import '../core/home.dart';
 
 class InBody extends StatefulWidget {
   const InBody({super.key});
@@ -8,17 +9,9 @@ class InBody extends StatefulWidget {
   State<InBody> createState() => _MyWidgetState();
 }
 
-final GlobalKey<FormState> formKey = GlobalKey<FormState>();
-final TextEditingController ageController = TextEditingController();
-final TextEditingController heightController = TextEditingController();
-final TextEditingController weightController = TextEditingController();
-final TextEditingController waterController = TextEditingController();
-final TextEditingController bmrController = TextEditingController();
-final TextEditingController fatController = TextEditingController();
-final TextEditingController muscleController = TextEditingController();
-final TextEditingController oldController = TextEditingController();
-
 class _MyWidgetState extends State<InBody> {
+  String? selectedGender;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -28,21 +21,21 @@ class _MyWidgetState extends State<InBody> {
           backgroundColor: Colors.black,
           title: Row(
             children: [
-              const Text(
+              Text(
                 'Enter Your Information.......',
                 style: TextStyle(color: Color(0xffD0FD3E)),
               ),
-              const SizedBox(
+              SizedBox(
                 width: 20,
               ),
               GestureDetector(
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const HomeScreen()),
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
                   );
                 },
-                child: const Text(
+                child: Text(
                   'Skip',
                   style: TextStyle(color: Colors.white),
                 ),
@@ -50,322 +43,358 @@ class _MyWidgetState extends State<InBody> {
             ],
           ),
         ),
-        body: Form(
-          key: formKey,
-          child: Row(
-            children: [
-              Column(
-                children: [
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+        body: Row(
+          children: [
+            Column(
+              children: [
+                SizedBox(
+                  height: 10,
+                ),
+                // Gender Row
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'GENDER                      ',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Row(
                     children: [
-                      Text(
-                        'AGE                             ',
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        width: 179,
+                        height: 40,
+                        padding: EdgeInsets.symmetric(horizontal: 16),
+                        child: DropdownButtonFormField<String>(
+                          value: selectedGender,
+                          items: ['Male', 'Female'].map((String value) {
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text(value),
+                            );
+                          }).toList(),
+                          hint: Text(
+                            "Select Gender",
+                            style: TextStyle(color: Colors.black38),
+                          ),
+                          onChanged: (newValue) {
+                            setState(() {
+                              selectedGender = newValue;
+                            });
+                          },
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                          ),
+                        ),
                       ),
                     ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Row(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          width: 179,
-                          height: 40,
-                          padding: const EdgeInsets.symmetric(horizontal: 26),
-                          child: TextFormField(
-                            keyboardType: TextInputType.number,
-                            obscureText: true,
-                            decoration: const InputDecoration(
-                                hintText: "Enter your Age ",
-                                hintStyle: TextStyle(color: Colors.black38),
-                                border: InputBorder.none),
-                                controller: ageController,
-                          ),
-                        ),
-                      ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                // Age Row
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'AGE                             ',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Row(
                     children: [
-                      Text(
-                        'HEIGHT (Reqweird)    ',
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        width: 179,
+                        height: 40,
+                        padding: EdgeInsets.symmetric(horizontal: 26),
+                        child: TextField(
+                          obscureText: true,
+                          decoration: InputDecoration(
+                              hintText: "Enter your Age ",
+                              hintStyle: TextStyle(color: Colors.black38),
+                              border: InputBorder.none),
+                        ),
                       ),
                     ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Row(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          width: 179,
-                          height: 40,
-                          padding: const EdgeInsets.symmetric(horizontal: 26),
-                          child: TextFormField(
-                            obscureText: true,
-                            decoration: const InputDecoration(
-                                hintText: "Enter your Height ",
-                                hintStyle: TextStyle(color: Colors.black38),
-                                border: InputBorder.none),
-                                controller: heightController,
-                          ),
-                        ),
-                      ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'HEIGHT (Required)    ',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Row(
                     children: [
-                      Text(
-                        'water %                         ',
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        width: 179,
+                        height: 40,
+                        padding: EdgeInsets.symmetric(horizontal: 26),
+                        child: TextField(
+                          obscureText: true,
+                          decoration: InputDecoration(
+                              hintText: "Enter your Height ",
+                              hintStyle: TextStyle(color: Colors.black38),
+                              border: InputBorder.none),
+                        ),
                       ),
                     ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Row(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          width: 179,
-                          height: 40,
-                          padding: const EdgeInsets.all(10),
-                          child: TextFormField(
-                            obscureText: true,
-                            decoration: const InputDecoration(
-                                hintText: "Enter percentage Water ",
-                                hintStyle: TextStyle(
-                                    color: Colors.black38, fontSize: 14),
-                                border: InputBorder.none),
-                                controller: waterController,
-                          ),
-                        ),
-                      ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'water %                         ',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Row(
                     children: [
-                      Text(
-                        'BMR (_kcoh)                ',
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        width: 179,
+                        height: 40,
+                        padding: EdgeInsets.all(10),
+                        child: TextField(
+                          obscureText: true,
+                          decoration: InputDecoration(
+                              hintText: "Enter percentage Water ",
+                              hintStyle: TextStyle(
+                                  color: Colors.black38, fontSize: 14),
+                              border: InputBorder.none),
+                        ),
                       ),
                     ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Row(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          width: 179,
-                          height: 40,
-                          padding: const EdgeInsets.symmetric(horizontal: 26),
-                          child: TextFormField(
-                            obscureText: true,
-                            decoration: const InputDecoration(
-                                hintText: "Enter your Bmr ",
-                                hintStyle: TextStyle(color: Colors.black38),
-                                border: InputBorder.none),
-                                controller: bmrController,
-                          )
-                          ,
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
+            ),
 
-              //! colum 2
-              Column(
-                children: [
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+            //! colum 2
+            Column(
+              children: [
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'WEIGHT (Required)',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Row(
                     children: [
-                      Text(
-                        'WEIGHT (Reqweird)',
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        width: 179,
+                        height: 40,
+                        padding: EdgeInsets.symmetric(horizontal: 26),
+                        child: TextField(
+                          obscureText: true,
+                          decoration: InputDecoration(
+                              hintText: "Enter your weight ",
+                              hintStyle: TextStyle(color: Colors.black38),
+                              border: InputBorder.none),
+                        ),
                       ),
                     ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Row(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          width: 179,
-                          height: 40,
-                          padding: const EdgeInsets.symmetric(horizontal: 26),
-                          child: TextFormField(
-                            obscureText: true,
-                            decoration: const InputDecoration(
-                                hintText: "Enter your weight ",
-                                hintStyle: TextStyle(color: Colors.black38),
-                                border: InputBorder.none),
-                                controller: weightController,
-                          ),
-                        ),
-                      ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'FAT% (If Available)',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Row(
                     children: [
-                      Text(
-                        'FAT% (If Avaiable)',
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        width: 179,
+                        height: 40,
+                        padding: EdgeInsets.symmetric(horizontal: 26),
+                        child: TextField(
+                          obscureText: true,
+                          decoration: InputDecoration(
+                              hintText: "Enter percentage Fat ",
+                              hintStyle: TextStyle(color: Colors.black38),
+                              border: InputBorder.none),
+                        ),
                       ),
                     ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Row(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          width: 179,
-                          height: 40,
-                          padding: const EdgeInsets.symmetric(horizontal: 26),
-                          child: TextFormField(
-                            obscureText: true,
-                            decoration: const InputDecoration(
-                                hintText: "Enter percentage Fat ",
-                                hintStyle: TextStyle(color: Colors.black38),
-                                border: InputBorder.none),
-                                controller: fatController,
-                          ),
-                        ),
-                      ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'MUSCLE                 ',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Row(
                     children: [
-                      Text(
-                        'MUSCLE                 ',
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        width: 179,
+                        height: 40,
+                        padding: EdgeInsets.only(top: 5, left: 27, bottom: 5),
+                        child: TextField(
+                          obscureText: true,
+                          decoration: InputDecoration(
+                              hintText: "Enter Your Muscle ",
+                              hintStyle: TextStyle(
+                                  color: Colors.black38, fontSize: 14),
+                              border: InputBorder.none),
+                        ),
                       ),
                     ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Row(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          width: 179,
-                          height: 40,
-                          padding: const EdgeInsets.only(
-                              top: 5, left: 27, bottom: 5),
-                          child: TextFormField(
-                            obscureText: true,
-                            decoration: const InputDecoration(
-                                hintText: "Enter Your Muscle ",
-                                hintStyle: TextStyle(
-                                    color: Colors.black38, fontSize: 14),
-                                border: InputBorder.none),
-                                controller: muscleController,
-                          ),
-                        ),
-                      ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'BMR (_kcal)                ',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
-                  ),
-                  //! bottom
-                  const SizedBox(
-                    height: 400,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Row(
                     children: [
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(
-                              const Color(0xffD0FD3E)),
-                          padding: MaterialStateProperty.all(
-                              const EdgeInsets.symmetric(
-                                  horizontal: 25, vertical: 10)),
-                          shape: MaterialStateProperty.all(
-                              RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(13))),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const HomeScreen()),
-                                );
-                              },
-                              child: const Text(
-                                " Click Here ",
-                                style: TextStyle(
-                                    fontSize: 24, color: Colors.black),
-                              ),
+                        width: 179,
+                        height: 40,
+                        padding: EdgeInsets.symmetric(horizontal: 26),
+                        child: TextField(
+                          obscureText: true,
+                          decoration: InputDecoration(
+                              hintText: "Enter your BMR ",
+                              hintStyle: TextStyle(color: Colors.black38),
+                              border: InputBorder.none),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                //! bottom
+                SizedBox(
+                  height: 300,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Color(0xffD0FD3E)),
+                        padding: MaterialStateProperty.all(
+                            EdgeInsets.symmetric(horizontal: 25, vertical: 10)),
+                        shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(13))),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => HomeScreen()),
+                              );
+                            },
+                            child: Text(
+                              " Click Here ",
+                              style:
+                                  TextStyle(fontSize: 24, color: Colors.black),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                ],
-              ),
-            ],
-          ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );

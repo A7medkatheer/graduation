@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/core/home.dart';
-// import 'package:ui_screens/core/home.dart';
+
+import 'home.dart';
 
 class TrainingPrograms extends StatelessWidget {
   const TrainingPrograms({super.key});
@@ -17,10 +17,10 @@ class TrainingPrograms extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const HomeScreen()),
+                MaterialPageRoute(builder: (context) => HomeScreen()),
               );
             },
-            child: const Icon(
+            child: Icon(
               Icons.arrow_circle_left_outlined,
               color: Color(0xffD0FD3E),
               size: 50,
@@ -35,25 +35,51 @@ class TrainingPrograms extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(
+              SizedBox(
                 height: 20,
               ),
-              const Text(
+              Text(
                 'Training programs',
                 style: TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 20,
               ),
-              const Text(
-                'Exercises(Drying)',
+              Text(
+                'Exercises(Drying system)',
                 style: TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
               ),
               Image.asset(
-                'assets/assets/images/training_programs_see_all.jpg',
+                'assets/assets/images/drying_system.png',
                 fit: BoxFit.cover,
-                width: double.infinity,
-                height: 750,
+                width: 382,
+                height: 237,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                'Exercises(Bulking system)',
+                style: TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
+              ),
+              Image.asset(
+                'assets/assets/images/bulking_system.png',
+                fit: BoxFit.cover,
+                width: 382,
+                height: 237,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                'Exercises(Push - Pull -Legs system)',
+                style: TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
+              ),
+              Image.asset(
+                'assets/assets/images/push_pull_legs_system.png',
+                fit: BoxFit.cover,
+                width: 382,
+                height: 237,
               ),
             ],
           ),

@@ -1,20 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/core/home.dart';
-import 'package:flutter_application_1/supplement/creatine_descrpation.dart';
-import 'package:flutter_application_1/supplement/multivitamin.dart';
-import 'package:flutter_application_1/supplement/opti_men.dart';
-import 'package:flutter_application_1/supplement/zink.dart';
-// import 'package:ui_screens/core/home.dart';
-// import 'package:ui_screens/supplement/creatine_descrpation.dart';
-// import 'package:ui_screens/supplement/multivitamin.dart';
-// import 'package:ui_screens/supplement/opti_men.dart';
-// import 'package:ui_screens/supplement/zink.dart';
 
 import '../constant/constant.dart';
+import '../core/home.dart';
+import 'creatine_descrpation.dart';
+import 'multivitamin.dart';
+import 'opti_men.dart';
 import 'protein_descrpation.dart';
+import 'vitamin_nation.dart';
+import 'zink.dart';
 
 class SupplementScreen extends StatelessWidget {
-  const SupplementScreen({super.key});
+  const SupplementScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +24,10 @@ class SupplementScreen extends StatelessWidget {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const HomeScreen()),
+              MaterialPageRoute(builder: (context) => HomeScreen()),
             );
           },
-          child: const Icon(
+          child: Icon(
             Icons.arrow_circle_left_outlined,
             color: Color(0xffD0FD3E),
             size: 50,
@@ -43,7 +39,7 @@ class SupplementScreen extends StatelessWidget {
           padding: const EdgeInsets.all(15.0),
           child: Column(
             children: [
-              const Row(
+              Row(
                 children: [
                   Text(
                     'The Most Popular Supplements',
@@ -51,7 +47,7 @@ class SupplementScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(
+              SizedBox(
                 height: 10,
               ),
               GestureDetector(
@@ -59,10 +55,10 @@ class SupplementScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const ProteinDescrpation()),
+                        builder: (context) => ProteinDescrpation()),
                   );
                 },
-                child: const Row(
+                child: Row(
                   children: [
                     Text(
                       'Protein',
@@ -71,10 +67,10 @@ class SupplementScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 10,
               ),
-              SizedBox(
+              Container(
                 height: 240,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
@@ -82,25 +78,25 @@ class SupplementScreen extends StatelessWidget {
                     _buildItemContainer(
                       'assets/assets/images/Iso_add.png',
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
                     _buildItemContainer(
                       'assets/assets/images/mass_tech.png',
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
                     _buildItemContainer(
                       'assets/assets/images/mass_geiner.png',
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
                     _buildItemContainer(
                       'assets/assets/images/iso100.png',
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
                     _buildItemContainer(
@@ -109,7 +105,7 @@ class SupplementScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 10,
               ),
               Row(
@@ -119,20 +115,20 @@ class SupplementScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CreatineDescrpation()),
+                            builder: (context) => CreatineDescrpation()),
                       );
                     },
-                    child: const Text(
+                    child: Text(
                       'Creatien',
                       style: TextStyle(fontSize: 24, color: Color(0xffD0FD3E)),
                     ),
                   ),
                 ],
               ),
-              const SizedBox(
+              SizedBox(
                 height: 10,
               ),
-              SizedBox(
+              Container(
                 height: 240,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
@@ -140,37 +136,37 @@ class SupplementScreen extends StatelessWidget {
                     _buildItemContainer(
                       'assets/assets/images/gold3.png',
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
                     _buildItemContainer(
                       'assets/assets/images/cre_add.png',
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
                     _buildItemContainer(
                       'assets/assets/images/platinum.png',
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
                     _buildItemContainer(
                       'assets/assets/images/mp.png',
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
                     _buildItemContainer(
                       'assets/assets/images/dorian.png',
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
                     _buildItemContainer(
                       'assets/assets/images/bad_ass.png',
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
                     _buildItemContainer(
@@ -179,10 +175,10 @@ class SupplementScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 10,
               ),
-              const Row(
+              Row(
                 children: [
                   Text(
                     'Vitamins',
@@ -190,10 +186,10 @@ class SupplementScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(
+              SizedBox(
                 height: 10,
               ),
-              SizedBox(
+              Container(
                 height: 240,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
@@ -202,60 +198,68 @@ class SupplementScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const Zink()),
+                          MaterialPageRoute(builder: (context) => Zink()),
                         );
                       },
                       child: _buildItemContainer(
                         'assets/assets/images/zinc.png',
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
-                       GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const Multivitamin()),
-                  );
-                },
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Multivitamin()),
+                        );
+                      },
                       child: _buildItemContainer(
                         'assets/assets/images/multivitamin.png',
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
-                     GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const OptiMen()),
-                  );
-                },
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => OptiMen()),
+                        );
+                      },
                       child: _buildItemContainer(
                         'assets/assets/images/opti_men.png',
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
-                    _buildItemContainer(
-                      'assets/assets/images/vitamin_nation.png',
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => VitaminNation()),
+                        );
+                      },
+                      child: _buildItemContainer(
+                        'assets/assets/images/vitamin_nation.png',
+                      ),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 100,
               ),
             ],
           ),
         ),
       ),
-      bottomNavigationBar: const bottom_tab_bar(),
+      bottomNavigationBar: bottom_tab_bar(),
     );
   }
 
@@ -277,7 +281,7 @@ class SupplementScreen extends StatelessWidget {
             height: 226,
             fit: BoxFit.cover,
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: 10),
         ],
       ),
     );

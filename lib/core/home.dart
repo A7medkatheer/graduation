@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Drying/drying_levels.dart';
-import 'package:flutter_application_1/Top_sources/Top_Sources.dart';
-import 'package:flutter_application_1/core/Nutrition_Program_see_all.dart';
-import 'package:flutter_application_1/core/nutrition_guide_see_all.dart';
-import 'package:flutter_application_1/core/training_programs_see_all.dart';
 
 
+import '../Drying/drying_levels.dart';
+import '../Top_sources/Top_Sources.dart';
 import '../constant/constant.dart';
-// import '../exercises/beginner/increase_weight/Day1_Chest.dart';
+import '../exercises/beginner/increase_weight/Day1_Chest.dart';
 import '../healthy_recipes/bulking_levels.dart';
 import '../loss_weight/loss_wight_level_one.dart';
+import '../payment/plan.dart';
 import '../supplement/supplement_screen.dart';
+import '../supplement/the_most_important_tips.dart';
+import 'Nutrition_Program_see_all.dart';
+import 'nutrition_guide_see_all.dart';
+import 'training_programs_see_all.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +23,21 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
-        actions: const [
+        actions: [
           Padding(
-            padding: EdgeInsets.all(14.0),
-            child: Icon(Icons.menu),
-          ),
+              padding: const EdgeInsets.all(14.0),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Plan()),
+                  );
+                },
+                child: Text(
+                  'Private-Home',
+                  style: TextStyle(color: Color(0xffD0FD3E), fontSize: 22),
+                ),
+              )),
         ],
       ),
       //!  singlechildScollview
@@ -34,7 +46,7 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
-              const Row(
+              Row(
                 children: [
                   Text(
                     'Common Questions',
@@ -45,28 +57,29 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(
+              SizedBox(
                 height: 10,
               ),
               GestureDetector(
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const TrainingPrograms()),
+                    MaterialPageRoute(
+                        builder: (context) => TheMostImportantTips()),
                   );
                 },
                 child: Image.asset('assets/assets/images/questions.png'),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 10,
               ),
               Row(
                 children: [
-                  const Text(
+                  Text(
                     'Nutritional supplements',
                     style: TextStyle(color: Color(0xffD0FD3E), fontSize: 14),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 170,
                   ),
                   GestureDetector(
@@ -74,17 +87,17 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const SupplementScreen()),
+                            builder: (context) => SupplementScreen()),
                       );
                     },
-                    child: const Text(
+                    child: Text(
                       'See All',
                       style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
                     ),
                   )
                 ],
               ),
-              const SizedBox(
+              SizedBox(
                 height: 10,
               ),
               GestureDetector(
@@ -92,14 +105,14 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const SupplementScreen()),
+                          builder: (context) => SupplementScreen()),
                     );
                   },
                   child: Image.asset('assets/assets/images/supplements2.png')),
-              const SizedBox(
+              SizedBox(
                 height: 10,
               ),
-              const Row(
+              Row(
                 children: [
                   Text(
                     'Exercise guide',
@@ -114,10 +127,10 @@ class HomeScreen extends StatelessWidget {
                   )
                 ],
               ),
-              const SizedBox(
+              SizedBox(
                 height: 10,
               ),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CircleAvatar(
@@ -138,16 +151,16 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(
+              SizedBox(
                 height: 10,
               ),
               Row(
                 children: [
-                  const Text(
+                  Text(
                     'Training programs',
                     style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 170,
                   ),
                   GestureDetector(
@@ -155,34 +168,45 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const TrainingPrograms()),
+                            builder: (context) => TrainingPrograms()),
                       );
                     },
-                    child: const Text(
+                    child: Text(
                       'See All',
                       style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
                     ),
                   )
                 ],
               ),
-              const SizedBox(
+              SizedBox(
                 height: 20,
               ),
-              Image.asset(
-                'assets/assets/images/r1.jpg',
-                fit: BoxFit.fill,
-                width: 600,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => DryingLevels(
+                              initialIndex: 1,
+                            )),
+                  );
+                },
+                child: Image.asset(
+                  'assets/assets/images/learn_basic_of_drying.png',
+                  fit: BoxFit.fill,
+                  width: 600,
+                ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 30,
               ),
               Row(
                 children: [
-                  const Text(
+                  Text(
                     'Nutrition Programs',
                     style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 170,
                   ),
                   GestureDetector(
@@ -190,10 +214,10 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const NutritionProgramSeeAll()),
+                            builder: (context) => NutritionProgramSeeAll()),
                       );
                     },
-                    child: const Text(
+                    child: Text(
                       'See All',
                       style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
                     ),
@@ -204,11 +228,11 @@ class HomeScreen extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const DryingLevels()),
+                      MaterialPageRoute(builder: (context) => DryingLevels()),
                     );
                   },
                   child: Image.asset('assets/assets/images/Dietart.jpg')),
-              const SizedBox(
+              SizedBox(
                 height: 20,
               ),
               GestureDetector(
@@ -216,31 +240,31 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const HealthyRecipesBulkingUp1()),
+                          builder: (context) => HealthyRecipesBulkingUp1()),
                     );
                   },
                   child: Image.asset('assets/assets/images/Nutritional.jpg')),
-              const SizedBox(
+              SizedBox(
                 height: 20,
               ),
               GestureDetector(
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const LossWightUp1()),
+                      MaterialPageRoute(builder: (context) => LossWightUp1()),
                     );
                   },
                   child: Image.asset('assets/assets/images/weight loss.jpg')),
-              const SizedBox(
+              SizedBox(
                 height: 30,
               ),
               Row(
                 children: [
-                  const Text(
+                  Text(
                     'Nutrition Guide',
                     style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 190,
                   ),
                   GestureDetector(
@@ -248,76 +272,93 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const Nutritionguide()),
+                            builder: (context) => Nutritionguide()),
                       );
                     },
-                    child: const Text(
+                    child: Text(
                       'See All',
                       style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
                     ),
                   )
                 ],
               ),
-              const SizedBox(
+              SizedBox(
                 height: 20,
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) =>  TopSources()),
-                  );
-                },
-                child: Row(
-                  children: [
-                    Image.asset(
-                      'assets/assets/images/protein.png',
-                      height: 189,
-                      width: 182,
-                    ),
-                    const SizedBox(
-                      width: 20,
-                    ),
-                    Image.asset(
+              Row(
+                children: [
+                  Image.asset(
+                    'assets/assets/images/protein.png',
+                    height: 189,
+                    width: 182,
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => TopSources(
+                                  initialIndex: 1,
+                                )),
+                      );
+                    },
+                    child: Image.asset(
                       'assets/assets/images/carbs.png',
                       height: 189,
                       width: 182,
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-              const SizedBox(
+              SizedBox(
                 height: 20,
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) =>  TopSources()),
-                  );
-                },
-                child: Row(
-                  children: [
-                    Image.asset(
+              Row(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => TopSources(
+                                  initialIndex: 3,
+                                )),
+                      );
+                    },
+                    child: Image.asset(
                       'assets/assets/images/Dariy.png',
                       height: 189,
                       width: 182,
                     ),
-                    const SizedBox(
-                      width: 20,
-                    ),
-                    Image.asset(
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => TopSources(
+                                  initialIndex: 4,
+                                )),
+                      );
+                    },
+                    child: Image.asset(
                       'assets/assets/images/fat.png',
                       height: 189,
                       width: 182,
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-              const SizedBox(
+              SizedBox(
                 height: 30,
               ),
-              const Row(
+              Row(
                 children: [
                   Text(
                     'Nutrition supplements',
@@ -337,7 +378,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const SupplementScreen()),
+                          builder: (context) => SupplementScreen()),
                     );
                   },
                   child: Image.asset('assets/assets/images/supplements.jpg')),
@@ -346,7 +387,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const SupplementScreen()),
+                          builder: (context) => SupplementScreen()),
                     );
                   },
                   child: Image.asset('assets/assets/images/supplements.jpg')),
@@ -354,7 +395,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: const bottom_tab_bar(),
+      bottomNavigationBar: bottom_tab_bar(),
     );
   }
 }

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/age.dart';
-import 'package:flutter_application_1/pages/goal.dart';
+
+import 'in_body.dart';
+import 'weight.dart';
+
 
 class HeightPicker extends StatefulWidget {
-  const HeightPicker({super.key});
-
   @override
-  // ignore: library_private_types_in_public_api
   _HeightPickerState createState() => _HeightPickerState();
 }
 
@@ -24,27 +23,27 @@ class _HeightPickerState extends State<HeightPicker> {
             width: double.infinity,
             height: double.infinity,
           ),
-          const Padding(
-            padding: EdgeInsets.all(70.0),
+          Padding(
+            padding: const EdgeInsets.all(70.0),
             child: Text(
               'WHAT\'S YOUR HEIGHT?',
               style: TextStyle(fontSize: 25, color: Colors.white),
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(top: 110.0),
+          Padding(
+            padding: const EdgeInsets.only(top: 110.0),
             child: Text(
               '        THIS HELPS US CREATE YOUR PERSONALIZED PLAN',
               style: TextStyle(color: Colors.white),
             ),
           ),
           Center(
-            child: SizedBox(
+            child: Container(
               height: 200,
               child: ListWheelScrollView(
                 itemExtent: 80, // Increase height for each item
                 diameterRatio: 1.5,
-                physics: const FixedExtentScrollPhysics(),
+                physics: FixedExtentScrollPhysics(),
                 children: List.generate(
                   100, // Number of heights to display
                   (index) {
@@ -54,18 +53,17 @@ class _HeightPickerState extends State<HeightPicker> {
                       children: [
                         Text(
                           '$height cm',
-                          style: const TextStyle(
-                              fontSize: 32, color: Colors.white),
+                          style: TextStyle(fontSize: 32, color: Colors.white),
                         ),
-                        const Center(
-                          child: SizedBox(
+                        Center(
+                          child: Container(
                             width: 100,
                             child: Divider(
                               color: Color(0xffD0FD3E),
-                              height: 34,
-                              thickness: 4,
-                              indent: 0,
-                              endIndent: 0,
+                              height: 5,
+                              thickness: 2,
+                              indent: 2,
+                              endIndent: 2,
                             ),
                           ),
                         ),
@@ -91,26 +89,25 @@ class _HeightPickerState extends State<HeightPicker> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Age()),
+                      MaterialPageRoute(builder: (context) => Weight()),
                     );
                   },
-                  child: const Icon(
+                  child: Icon(
                     Icons.arrow_circle_left_outlined,
                     color: Color(0xffD0FD3E),
                     size: 60,
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   width: 180,
                 ),
                 ElevatedButton(
                   onPressed: () {},
                   style: ButtonStyle(
                     backgroundColor:
-                        MaterialStateProperty.all(const Color(0xffD0FD3E)),
+                        MaterialStateProperty.all(Color(0xffD0FD3E)),
                     padding: MaterialStateProperty.all(
-                        const EdgeInsets.symmetric(
-                            horizontal: 25, vertical: 10)),
+                        EdgeInsets.symmetric(horizontal: 25, vertical: 10)),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(27))),
                   ),
@@ -118,10 +115,10 @@ class _HeightPickerState extends State<HeightPicker> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const Goal()),
+                        MaterialPageRoute(builder: (context) => InBody()),
                       );
                     },
-                    child: const Text(
+                    child: Text(
                       " Next > ",
                       style: TextStyle(fontSize: 24, color: Colors.black),
                     ),

@@ -1,13 +1,10 @@
-// ignore_for_file: library_private_types_in_public_api
-
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/gender.dart';
-import 'package:flutter_application_1/pages/height.dart';
+
+import 'gender.dart';
+import 'weight.dart';
 
 
 class Age extends StatefulWidget {
-  const Age({super.key});
-
   @override
   _AgePickerState createState() => _AgePickerState();
 }
@@ -26,27 +23,27 @@ class _AgePickerState extends State<Age> {
             width: double.infinity,
             height: double.infinity,
           ),
-          const Padding(
-            padding: EdgeInsets.all(70.0),
+          Padding(
+            padding: const EdgeInsets.all(70.0),
             child: Text(
               'HOW OLD ARE YOU ?',
               style: TextStyle(fontSize: 28, color: Colors.white),
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(top: 110.0),
+          Padding(
+            padding: const EdgeInsets.only(top: 110.0),
             child: Text(
               '        THIS HELPS US CREATE YOUR PERSONALIZED PLAN',
               style: TextStyle(color: Colors.white),
             ),
           ),
           Center(
-            child: SizedBox(
+            child: Container(
               height: 300,
               child: ListWheelScrollView(
                 itemExtent: 60,
                 diameterRatio: 1.5,
-                physics: const FixedExtentScrollPhysics(),
+                physics: FixedExtentScrollPhysics(),
                 children: List.generate(
                   100, // Number of ages to display
                   (index) {
@@ -56,10 +53,10 @@ class _AgePickerState extends State<Age> {
                       children: [
                         Text(
                           age.toString(),
-                          style: const TextStyle(fontSize: 35, color: Colors.white),
+                          style: TextStyle(fontSize: 35, color: Colors.white),
                         ),
-                        const Center(
-                          child: SizedBox(
+                        Center(
+                          child: Container(
                             width: 150,
                             child: Divider(
                               color: Color(0xffD0FD3E),
@@ -93,16 +90,16 @@ class _AgePickerState extends State<Age> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const GenderSelection()),
+                          builder: (context) => GenderSelection()),
                     );
                   },
-                  child: const Icon(
+                  child: Icon(
                     Icons.arrow_circle_left_outlined,
                     color: Color(0xffD0FD3E),
                     size: 60,
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   width: 180,
                 ),
                 ElevatedButton(
@@ -111,9 +108,9 @@ class _AgePickerState extends State<Age> {
                   },
                   style: ButtonStyle(
                     backgroundColor:
-                        MaterialStateProperty.all(const Color(0xffD0FD3E)),
+                        MaterialStateProperty.all(Color(0xffD0FD3E)),
                     padding: MaterialStateProperty.all(
-                        const EdgeInsets.symmetric(horizontal: 25, vertical: 10)),
+                        EdgeInsets.symmetric(horizontal: 25, vertical: 10)),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(27))),
                   ),
@@ -121,10 +118,10 @@ class _AgePickerState extends State<Age> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const HeightPicker()),
+                        MaterialPageRoute(builder: (context) => Weight()),
                       );
                     },
-                    child: const Text(
+                    child: Text(
                       " Next > ",
                       style: TextStyle(fontSize: 24, color: Colors.black),
                     ),

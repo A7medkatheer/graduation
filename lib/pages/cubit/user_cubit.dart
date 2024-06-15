@@ -1,6 +1,5 @@
 // ignore_for_file: avoid_print
 
-import 'dart:math';
 
 import 'package:flutter_application_1/pages/cache/cache_helper.dart';
 import 'package:flutter_application_1/pages/core/api/api_consumer.dart';

@@ -11,8 +11,8 @@ import 'package:flutter_svg/svg.dart';
 // import 'package:ui_screens/pages/core/verification.dart';
 
 class Signup extends StatelessWidget {
-  Signup({super.key});
-  late String email = '';
+   Signup({super.key});
+  late  String email = '';
   final String type = "sendCodeVerfiy";
   @override
   Widget build(BuildContext context) {

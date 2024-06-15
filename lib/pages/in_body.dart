@@ -21,21 +21,21 @@ class _MyWidgetState extends State<InBody> {
           backgroundColor: Colors.black,
           title: Row(
             children: [
-              Text(
+              const Text(
                 'Enter Your Information.......',
                 style: TextStyle(color: Color(0xffD0FD3E)),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               GestureDetector(
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                    MaterialPageRoute(builder: (context) => const HomeScreen()),
                   );
                 },
-                child: Text(
+                child: const Text(
                   'Skip',
                   style: TextStyle(color: Colors.white),
                 ),
@@ -47,11 +47,11 @@ class _MyWidgetState extends State<InBody> {
           children: [
             Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 // Gender Row
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
@@ -71,7 +71,7 @@ class _MyWidgetState extends State<InBody> {
                         ),
                         width: 179,
                         height: 40,
-                        padding: EdgeInsets.symmetric(horizontal: 16),
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
                         child: DropdownButtonFormField<String>(
                           value: selectedGender,
                           items: ['Male', 'Female'].map((String value) {
@@ -80,7 +80,7 @@ class _MyWidgetState extends State<InBody> {
                               child: Text(value),
                             );
                           }).toList(),
-                          hint: Text(
+                          hint: const Text(
                             "Select Gender",
                             style: TextStyle(color: Colors.black38),
                           ),
@@ -89,7 +89,7 @@ class _MyWidgetState extends State<InBody> {
                               selectedGender = newValue;
                             });
                           },
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             border: InputBorder.none,
                           ),
                         ),
@@ -97,11 +97,11 @@ class _MyWidgetState extends State<InBody> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 // Age Row
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
@@ -121,8 +121,8 @@ class _MyWidgetState extends State<InBody> {
                         ),
                         width: 179,
                         height: 40,
-                        padding: EdgeInsets.symmetric(horizontal: 26),
-                        child: TextField(
+                        padding: const EdgeInsets.symmetric(horizontal: 26),
+                        child: const TextField(
                           obscureText: true,
                           decoration: InputDecoration(
                               hintText: "Enter your Age ",
@@ -133,10 +133,10 @@ class _MyWidgetState extends State<InBody> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
@@ -156,8 +156,8 @@ class _MyWidgetState extends State<InBody> {
                         ),
                         width: 179,
                         height: 40,
-                        padding: EdgeInsets.symmetric(horizontal: 26),
-                        child: TextField(
+                        padding: const EdgeInsets.symmetric(horizontal: 26),
+                        child: const TextField(
                           obscureText: true,
                           decoration: InputDecoration(
                               hintText: "Enter your Height ",
@@ -168,10 +168,10 @@ class _MyWidgetState extends State<InBody> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
@@ -191,8 +191,8 @@ class _MyWidgetState extends State<InBody> {
                         ),
                         width: 179,
                         height: 40,
-                        padding: EdgeInsets.all(10),
-                        child: TextField(
+                        padding: const EdgeInsets.all(10),
+                        child: const TextField(
                           obscureText: true,
                           decoration: InputDecoration(
                               hintText: "Enter percentage Water ",
@@ -210,10 +210,10 @@ class _MyWidgetState extends State<InBody> {
             //! colum 2
             Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
@@ -233,8 +233,8 @@ class _MyWidgetState extends State<InBody> {
                         ),
                         width: 179,
                         height: 40,
-                        padding: EdgeInsets.symmetric(horizontal: 26),
-                        child: TextField(
+                        padding: const EdgeInsets.symmetric(horizontal: 26),
+                        child: const TextField(
                           obscureText: true,
                           decoration: InputDecoration(
                               hintText: "Enter your weight ",
@@ -245,10 +245,10 @@ class _MyWidgetState extends State<InBody> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
@@ -268,8 +268,8 @@ class _MyWidgetState extends State<InBody> {
                         ),
                         width: 179,
                         height: 40,
-                        padding: EdgeInsets.symmetric(horizontal: 26),
-                        child: TextField(
+                        padding: const EdgeInsets.symmetric(horizontal: 26),
+                        child: const TextField(
                           obscureText: true,
                           decoration: InputDecoration(
                               hintText: "Enter percentage Fat ",
@@ -280,10 +280,10 @@ class _MyWidgetState extends State<InBody> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
@@ -303,8 +303,8 @@ class _MyWidgetState extends State<InBody> {
                         ),
                         width: 179,
                         height: 40,
-                        padding: EdgeInsets.only(top: 5, left: 27, bottom: 5),
-                        child: TextField(
+                        padding: const EdgeInsets.only(top: 5, left: 27, bottom: 5),
+                        child: const TextField(
                           obscureText: true,
                           decoration: InputDecoration(
                               hintText: "Enter Your Muscle ",
@@ -316,10 +316,10 @@ class _MyWidgetState extends State<InBody> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
@@ -339,8 +339,8 @@ class _MyWidgetState extends State<InBody> {
                         ),
                         width: 179,
                         height: 40,
-                        padding: EdgeInsets.symmetric(horizontal: 26),
-                        child: TextField(
+                        padding: const EdgeInsets.symmetric(horizontal: 26),
+                        child: const TextField(
                           obscureText: true,
                           decoration: InputDecoration(
                               hintText: "Enter your BMR ",
@@ -352,7 +352,7 @@ class _MyWidgetState extends State<InBody> {
                   ),
                 ),
                 //! bottom
-                SizedBox(
+                const SizedBox(
                   height: 300,
                 ),
                 Row(
@@ -363,9 +363,9 @@ class _MyWidgetState extends State<InBody> {
                       onPressed: () {},
                       style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all(Color(0xffD0FD3E)),
+                            MaterialStateProperty.all(const Color(0xffD0FD3E)),
                         padding: MaterialStateProperty.all(
-                            EdgeInsets.symmetric(horizontal: 25, vertical: 10)),
+                            const EdgeInsets.symmetric(horizontal: 25, vertical: 10)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(13))),
                       ),
@@ -378,10 +378,10 @@ class _MyWidgetState extends State<InBody> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomeScreen()),
+                                    builder: (context) => const HomeScreen()),
                               );
                             },
-                            child: Text(
+                            child: const Text(
                               " Click Here ",
                               style:
                                   TextStyle(fontSize: 24, color: Colors.black),

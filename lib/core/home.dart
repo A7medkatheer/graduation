@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    'Common Questions',
+                    'Common Questions     ',
                     style: TextStyle(color: Color(0xffD0FD3E), fontSize: 24),
                   ),
                   SizedBox(

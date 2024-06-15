@@ -23,15 +23,15 @@ class _HeightPickerState extends State<Weight> {
             width: double.infinity,
             height: double.infinity,
           ),
-          Padding(
-            padding: const EdgeInsets.all(70.0),
+          const Padding(
+            padding: EdgeInsets.all(70.0),
             child: Text(
               'WHAT\'S YOUR WEIGHT?',
               style: TextStyle(fontSize: 24, color: Colors.white),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 110.0),
+          const Padding(
+            padding: EdgeInsets.only(top: 110.0),
             child: Text(
               '                               YOU CAN ALWAYS CHANGE THIS LATER',
               style: TextStyle(color: Colors.white, fontSize: 11),
@@ -43,7 +43,7 @@ class _HeightPickerState extends State<Weight> {
               child: ListWheelScrollView(
                 itemExtent: 80, // Increase height for each item
                 diameterRatio: 1.5,
-                physics: FixedExtentScrollPhysics(),
+                physics: const FixedExtentScrollPhysics(),
                 children: List.generate(
                   100, // Number of heights to display
                   (index) {
@@ -57,9 +57,9 @@ class _HeightPickerState extends State<Weight> {
                             Text(
                               '$Weight',
                               style:
-                                  TextStyle(fontSize: 32, color: Colors.white),
+                                  const TextStyle(fontSize: 32, color: Colors.white),
                             ),
-                            Text(
+                            const Text(
                               ' kg',
                               style: TextStyle(
                                 fontSize: 18,
@@ -71,7 +71,7 @@ class _HeightPickerState extends State<Weight> {
                         Center(
                           child: Container(
                             width: 100,
-                            child: Divider(
+                            child: const Divider(
                               color: Color(0xffD0FD3E),
                               height: 5,
                               thickness: 2,
@@ -105,22 +105,22 @@ class _HeightPickerState extends State<Weight> {
                       MaterialPageRoute(builder: (context) => Age()),
                     );
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.arrow_circle_left_outlined,
                     color: Color(0xffD0FD3E),
                     size: 60,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 180,
                 ),
                 ElevatedButton(
                   onPressed: () {},
                   style: ButtonStyle(
                     backgroundColor:
-                        MaterialStateProperty.all(Color(0xffD0FD3E)),
+                        MaterialStateProperty.all(const Color(0xffD0FD3E)),
                     padding: MaterialStateProperty.all(
-                        EdgeInsets.symmetric(horizontal: 25, vertical: 10)),
+                        const EdgeInsets.symmetric(horizontal: 25, vertical: 10)),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(27))),
                   ),
@@ -131,7 +131,7 @@ class _HeightPickerState extends State<Weight> {
                         MaterialPageRoute(builder: (context) => HeightPicker()),
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       " Next > ",
                       style: TextStyle(fontSize: 24, color: Colors.black),
                     ),

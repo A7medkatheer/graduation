@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 import '../Drying/drying_levels.dart';
 import '../Top_sources/Top_Sources.dart';
 import '../constant/constant.dart';
@@ -15,7 +14,7 @@ import 'nutrition_guide_see_all.dart';
 import 'training_programs_see_all.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +48,7 @@ class HomeScreen extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    'Common Questions     ',
+                    'Common Questions',
                     style: TextStyle(color: Color(0xffD0FD3E), fontSize: 24),
                   ),
                   SizedBox(

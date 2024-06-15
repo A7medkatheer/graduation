@@ -15,7 +15,7 @@ import 'nutrition_guide_see_all.dart';
 import 'training_programs_see_all.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

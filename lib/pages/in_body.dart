@@ -55,7 +55,7 @@ class _MyWidgetState extends State<InBody> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
-                      'GENDER                       ',
+                      'GENDER                     ',
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
                   ],
